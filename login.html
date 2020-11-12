@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Login Page </title>
+
+        <script type="text/javascript">
+            function validateForm(){
+
+                var y = document.forms["myform"]["temail"].value;
+                    if(y == " "){
+                        alert("Please fill in correct email address");
+                        return false
+                    }
+                
+                var z = document.forms["myform"]["tpass"].value;
+                    if(z == " "){
+                        alert("Please fill in correct password");
+                        return false
+                    }
+                    
+                        alert("Successful");
+                        return true
+            }
+        </script>
+</head>  
+<body>  
+     <h1> Login Form </h1> 
+    <form action="/register.php" method="post">
+        
+            <label>Username : </label><br>
+            <input type="text" placeholder="Enter email address" name="temail"
+            pattern = ".+@gmail.com"><br><br>
+
+            <label>Password : </label> <br>
+            <input type="password" placeholder="Enter Password" name="tpass"><br><br>
+
+            <button type="submit">Login</button>
+       
+    </form>   
+</body>   
+</html>
+
+ 
